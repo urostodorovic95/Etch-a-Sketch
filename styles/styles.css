@@ -1,0 +1,13 @@
+/* debug to visualize */
+.new-div {
+    background-color: purple;
+    border: 1px solid black;
+}
+/* styles */
+#container-grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 500px;
+}
+
