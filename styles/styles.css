@@ -1,6 +1,11 @@
 /* debug to visualize */
+body {
+    justify-content: center;
+    align-items: center;
+    position: center;;
+}
 .new-div {
-    background-color: purple;
+    background-color: green;
     border: 1px solid black;
 }
 /* styles */
