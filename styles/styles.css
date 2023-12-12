@@ -1,18 +1,78 @@
 /* debug to visualize */
-body {
-    justify-content: center;
-    align-items: center;
-    position: center;;
-}
 .new-div {
     background-color: green;
     border: 1px solid black;
 }
 /* styles */
 #container-grid {
+    margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     width: 500px;
     height: 500px;
 }
 
+body {
+    padding: 3px;
+}
+
+header {
+    font-family: 'Sacramento', cursive;
+    font-size: 100px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.container-main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-slider {
+    text-align: center;
+}
+
+
+.sidebar-left {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+}
+
+
+
+
+/* codepen slider */
+/* https://codepen.io/jonnaru/pen/JjXyKYM */
+.slider {
+    -webkit-appearance: none;
+    width: 200px;
+    height: 15px;
+    background: #000;
+    outline: none;
+    border: 5px solid lawngreen;
+    border-radius: 8px;
+  }
+  
+  
+  /* for chrome/safari */
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 60px;
+    background: #000;
+    cursor: pointer;
+    border: 5px solid lawngreen;
+    border-radius: 4px;
+  }
+  
+  /* for firefox */
+  .slider::-moz-range-thumb {
+    width: 20px;
+    height: 60px;
+    background: #000;
+    cursor: pointer;
+    border: 5px solid lawngreen;
+    border-radius: 4px;
+  }

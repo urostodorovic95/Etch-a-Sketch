@@ -22,4 +22,5 @@ gridContainer.addEventListener("mouseover", (e) => {
 });
 
 // debug:
-console.log(createGrid(30));
+console.log(createGrid(100));
+
