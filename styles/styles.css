@@ -8,8 +8,9 @@
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
-    width: 500px;
-    height: 500px;
+    width: 550px;
+    height: 550px;
+    border: 10px solid black;
 }
 
 body {
@@ -27,6 +28,7 @@ header {
 .container-main {
     display: flex;
     justify-content: space-between;
+    padding: 15px 50px;
 }
 
 .container-slider {
