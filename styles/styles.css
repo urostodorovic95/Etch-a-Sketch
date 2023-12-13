@@ -5,10 +5,9 @@
 }
 /* styles */
 #container-grid {
-    margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
-    width: 550px;
+    width: 55%;
     height: 550px;
     border: 10px solid #141E46;
 }
@@ -42,10 +41,13 @@ header {
     text-align: center;
 }
 
+.container-slider > p {
+    margin-bottom: 20px;
+}
 
 .sidebar-left {
     font-family: 'Open Sans', sans-serif;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 
@@ -55,11 +57,11 @@ header {
 /* https://codepen.io/jonnaru/pen/JjXyKYM */
 .slider {
     -webkit-appearance: none;
-    width: 200px;
+    width: 150px;
     height: 15px;
     background: #000;
     outline: none;
-    border: 5px solid lawngreen;
+    border: 5px solid #141E46;
     border-radius: 8px;
   }
   

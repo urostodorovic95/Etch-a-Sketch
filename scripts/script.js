@@ -39,6 +39,7 @@ function throttle(func, delay) {
   }
   
   function setGridSize() {
+    createGrid(50);
     let gridSize = document.getElementById("chosenGridSize");
     gridSize.addEventListener(
       "input",
