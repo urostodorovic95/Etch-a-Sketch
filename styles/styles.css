@@ -65,8 +65,12 @@ header {
     font-size: inherit;
     font-family: inherit;
     border-radius: 5px;
+    cursor:pointer;
   }
 
+.draw-tools-container {
+    border: 1px solid black;
+}
 
 /* codepen slider */
 /* https://codepen.io/jonnaru/pen/JjXyKYM */
@@ -103,3 +107,32 @@ header {
     border-radius: 4px;
   }
 
+
+/* switch: https://uiverse.io/vinodjangid07/gentle-parrot-87 */
+#checkbox {
+    display: none;
+  }
+  
+  .switch {
+    position: relative;
+    width: fit-content;
+    padding: 10px 20px;
+    background-color: #000;
+    border-radius: 50px;
+    z-index: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    transition: all 0.3s;
+  }
+  
+  #checkbox:checked + .switch {
+    background: linear-gradient(0.80turn, #FF6C33, #D9DB33, #B033DB);
+    box-shadow: 0px 0px 40px rgba(174, 0, 255, 0.438);
+  }
+  
