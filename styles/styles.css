@@ -10,25 +10,32 @@
     flex-wrap: wrap;
     width: 550px;
     height: 550px;
-    border: 10px solid black;
+    border: 10px solid #141E46;
 }
 
 body {
-    padding: 3px;
+    color: #F9E8D9;
+    padding: 10px;
+    background-color: #141E46;
 }
 
 header {
     font-family: 'Sacramento', cursive;
     font-size: 100px;
     font-weight: bold;
-    margin-bottom: 10px;
+    border-radius: 80px;
+    margin-bottom: 20px;
     text-align: center;
+    background: linear-gradient(0.25turn, #0E21A0, #9D44C0, #EC53B0);
 }
 
 .container-main {
+    border-radius: 100px;
+    background: linear-gradient(0.25turn, #EC53B0, #0E21A0, #9D44C0);
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    padding: 15px 50px;
+    padding: 25px 50px;
 }
 
 .container-slider {
