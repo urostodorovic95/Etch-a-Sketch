@@ -1,6 +1,6 @@
 /* debug to visualize */
 .new-div {
-  background-color: green;
+  background-color: #163020;
   border: 1px solid black;
 }
 /* styles */
@@ -68,10 +68,6 @@ header {
   cursor: pointer;
 }
 
-.draw-tools-container {
-  border: 1px solid black;
-}
-
 /* codepen slider */
 /* https://codepen.io/jonnaru/pen/JjXyKYM */
 .slider {
@@ -92,7 +88,7 @@ header {
   height: 60px;
   background: #000;
   cursor: pointer;
-  border: 5px solid lawngreen;
+  border: 5px solid #304D30;
   border-radius: 4px;
 }
 
@@ -135,3 +131,21 @@ header {
   box-shadow: 0px 0px 40px rgba(174, 0, 255, 0.438);
 }
 /* ********* */
+
+/* animations */
+.shake {
+    animation: shake 0.5s ease-in-out;
+  }
+  
+  @keyframes shake {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    25%, 75% {
+      transform: translateX(-5px);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+  }
+  

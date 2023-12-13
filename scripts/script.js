@@ -62,7 +62,20 @@ initializeGrid();
 // reset button config
 
 const resetButton = document.querySelector(".button-reset");
+
+// shake animation
 resetButton.addEventListener("click", () => {
+  // Add the shake class to trigger the shake animation
+  gridContainer.classList.add("shake");
+  resetButton.classList.add("shake");
+
+  // After a short delay, remove the shake class to reset the animation
+  setTimeout(() => {
+    gridContainer.classList.remove("shake");
+    resetButton.classList.remove("shake");
+  }, 500);
+
+  // Perform the reset logic
   createGrid(50);
   // reset the Canvas tiles slider
   let sliderTiles = document.querySelector("#chosenGridSize");
