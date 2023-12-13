@@ -27,29 +27,41 @@ gridContainer.addEventListener("mouseover", (e) => {
 });
 
 function throttle(func, delay) {
-    let timeout;
-    return function () {
-      const context = this;
-      const args = arguments;
-      clearTimeout(timeout);
-      timeout = setTimeout(() => {
-        func.apply(context, args);
-      }, delay);
-    };
-  }
-  
-  function setGridSize() {
+  let timeout;
+  return function () {
+    const context = this;
+    const args = arguments;
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      func.apply(context, args);
+    }, delay);
+  };
+}
+
+function initializeGrid() {
+  createGrid(50);
+  let gridSize = document.getElementById("chosenGridSize");
+  gridSize.addEventListener(
+    "input",
+    throttle(() => {
+      let size = Number(gridSize.value);
+      console.log(size);
+      createGrid(size);
+    }, 200) // Adjust the delay as needed
+  );
+}
+
+initializeGrid();
+
+
+// reset button config
+
+const resetButton = document.querySelector(".button-reset");
+resetButton.addEventListener(
+  "click", () => {
     createGrid(50);
-    let gridSize = document.getElementById("chosenGridSize");
-    gridSize.addEventListener(
-      "input",
-      throttle(() => {
-        let size = Number(gridSize.value);
-        console.log(size);
-        createGrid(size);
-      }, 200) // Adjust the delay as needed
-    );
+    // reset the Canvas tiles slider
+    let sliderTiles = document.querySelector("#chosenGridSize");
+    sliderTiles.value = 50;
   }
-  
-  setGridSize();
-  
+)

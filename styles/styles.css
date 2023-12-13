@@ -48,9 +48,23 @@ header {
 .sidebar-left {
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
-
+.button-reset {
+    background-color: #000;
+    border: none;
+    color: inherit;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: inherit;
+    font-family: inherit;
+    border-radius: 5px;
+  }
 
 
 /* codepen slider */
@@ -87,3 +101,4 @@ header {
     border: 5px solid lawngreen;
     border-radius: 4px;
   }
+
