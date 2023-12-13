@@ -1,5 +1,6 @@
 // document elements
 const gridContainer = document.querySelector("#container-grid");
+let drawRainbow = false;
 
 // create a grid
 function createGrid(gridSize) {
@@ -21,8 +22,13 @@ function createGrid(gridSize) {
 
 // listen for mouse hovers, make use of bubbling
 gridContainer.addEventListener("mouseover", (e) => {
+  shouldDrawRainbow();
   if (e.buttons === 1 && e.target.classList.contains("new-div")) {
-    e.target.style.backgroundColor = "white";
+    if (drawRainbow) {
+      e.target.style.backgroundColor = getRandomColor();
+    } else {
+      e.target.style.backgroundColor = "white";
+    }
   }
 });
 
@@ -53,15 +59,30 @@ function initializeGrid() {
 
 initializeGrid();
 
-
 // reset button config
 
 const resetButton = document.querySelector(".button-reset");
-resetButton.addEventListener(
-  "click", () => {
-    createGrid(50);
-    // reset the Canvas tiles slider
-    let sliderTiles = document.querySelector("#chosenGridSize");
-    sliderTiles.value = 50;
-  }
-)
+resetButton.addEventListener("click", () => {
+  createGrid(50);
+  // reset the Canvas tiles slider
+  let sliderTiles = document.querySelector("#chosenGridSize");
+  sliderTiles.value = 50;
+});
+
+// rainbow toggler
+function shouldDrawRainbow() {
+  const rainbowToggler = document.querySelector("#checkbox");
+  rainbowToggler.addEventListener("click", (e) => {
+    drawRainbow = e.target.checked;
+    console.log(drawRainbow);
+  });
+}
+
+function getRandomColor() {
+  const random255 = () => Math.floor(Math.random() * 256);
+  const red = random255();
+  const green = random255();
+  const blue = random255();
+
+  return `rgb(${red}, ${green}, ${blue})`;
+}
