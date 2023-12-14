@@ -51,7 +51,6 @@ function initializeGrid() {
     "input",
     throttle(() => {
       let size = Number(gridSize.value);
-      console.log(size);
       createGrid(size);
     }, 200) // Adjust the delay as needed
   );
@@ -87,7 +86,6 @@ function shouldDrawRainbow() {
   const rainbowToggler = document.querySelector("#checkbox");
   rainbowToggler.addEventListener("click", (e) => {
     drawRainbow = e.target.checked;
-    console.log(drawRainbow);
   });
 }
 
