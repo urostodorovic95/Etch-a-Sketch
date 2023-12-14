@@ -66,6 +66,7 @@ header {
   font-family: inherit;
   border-radius: 5px;
   cursor: pointer;
+  user-select: none;
 }
 
 /* codepen slider */
@@ -124,6 +125,7 @@ header {
   font-size: inherit;
   font-weight: inherit;
   transition: all 0.3s;
+  user-select: none;
 }
 
 #checkbox:checked + .switch {
