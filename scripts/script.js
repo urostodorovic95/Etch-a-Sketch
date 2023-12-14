@@ -75,6 +75,7 @@ resetButton.addEventListener("click", () => {
   // Add the shake class to trigger the shake animation
   gridContainer.classList.add("shake");
   resetButton.classList.add("shake");
+  displayGridSize(50);
 
   // After a short delay, remove the shake class to reset the animation
   setTimeout(() => {
