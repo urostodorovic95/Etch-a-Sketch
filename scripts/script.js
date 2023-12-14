@@ -45,18 +45,26 @@ function throttle(func, delay) {
 }
 
 function initializeGrid() {
-  createGrid(50);
+  let sliderTiles = document.querySelector("#chosenGridSize").value;
+  createGrid(sliderTiles);
+  displayGridSize(sliderTiles);
   let gridSize = document.getElementById("chosenGridSize");
   gridSize.addEventListener(
     "input",
     throttle(() => {
       let size = Number(gridSize.value);
       createGrid(size);
+      displayGridSize(size);
     }, 200) // Adjust the delay as needed
   );
 }
 
 initializeGrid();
+
+function displayGridSize(gridSize) {
+  const sizeDisplay = document.querySelector("p");
+  sizeDisplay.textContent = `Canvas tiles: ${gridSize} x ${gridSize}`
+}
 
 // reset button config
 
